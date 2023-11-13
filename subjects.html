@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subjects</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loaded()" class="d-flex" onkeyup="keyUp(event)">
+
+
+
+  <div id="sidebar" class="px-4 py-5">
+    <h2 class="mb-4 title-sidebar">Maktab</h2>
+    <div class="list-group">
+      <a href="#" class="list-group-item list-group-item-action">
+        Menu
+      </a>
+      <a href="./index.html" class="list-group-item list-group-item-action">Bosh sahifa</a>
+      <a href="./teachers.html" class="list-group-item list-group-item-action">O'qituvchilar</a>
+      <a href="./students.html" class="list-group-item list-group-item-action">O'quvchilar</a>
+      <a href="./employees.html" class="list-group-item list-group-item-action">Xodimlar</a>
+      <a href="#" class="list-group-item list-group-item-action active">Fanlar</a>
+      <a href="./rooms.html" class="list-group-item list-group-item-action">Xonalar</a>
+      <a href="#" class="list-group-item list-group-item-action">Dars jadvallari</a>
+    </div>
+  </div>
+
+
+
+  <div id="right-side">
+    <header class="px-3 py-2 d-flex justify-content-between">
+      <button class="btn" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
+      <p id="darkMode" class="dark-mode">Kun/Tun</p>
+    </header>
+
+    <div class="content p-5">
+      <div class="d-flex justify-content-between mb-4">
+        <h2 class="mainSection">Fanlar</h2>
+      </div>
+
+      <div class="row filter mb-3">
+        <div class="col-12">
+          <div class="col-3">
+            <input type="text" class="form-control" onchange="filter(event)" placeholder="filter"/>
+          </div>
+        </div>
+      </div>
+
+      <table class="table table-striped" id="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nomi</th>
+            <th>Necha soat</th>
+            <th>Ustoz</th>
+            <th>Xona</th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <th>1</th>
+            <td>Tarix</td>
+            <td>3</td>
+            <td>Davronova M</td>
+            <td>13</td>
+            <td>
+              <button class="btn" onclick="deleteStudent('1')"><i class="fas fa-trash"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <div class="row text-center fw-bold mt-4" id="cards">
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="school/subjects.js"></script>
+<script src="global.js"></script>
+</body>
+</html>
